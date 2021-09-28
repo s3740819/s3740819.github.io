@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700;800;900&display=swap');
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+body {
+    background-color: #222831;
+    height: calc(200vh);
+}
+
+a, a:hover {
+    text-decoration: none;
+    color: #00adb5;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-color: #222831;
+}
+
+.nav-bar {
+    width: 90%;
+    height: 120px;
+    margin: auto;
+    color: #00adb5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000000;
+    background-color: #222831;
+}
+
+.nav-bar .logo a {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-bar .menu ul li{
+    margin-right: 30px;
+}
+
+.nav-bar .menu ul li a {
+    font-size: 19px;
+    letter-spacing: 2px;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    transition: all 0.5s;
+    opacity: 0.6;
+}
+
+.nav-bar .menu ul li a.active {
+    opacity: 1;
+}
+
+.nav-bar .menu ul li a:hover {
+    font-size: 30px;
+    opacity: 1;
+}
+
+.nav-bar .social-media ul li i{
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 5px;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    font-size: 19px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-bar .social-media ul li i:hover{
+    background: linear-gradient(#b50054,#0091b5);
+}
+
+.hero {
+    width: 100%;
+}
+
+.hero .row {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.hero .row .left-section{
+    width: 40%;
+    margin-top: 100px;
+    margin-left: 50px;
+    background: transparent;
+    z-index: 2;
+}
+
+.hero .row .left-section h2{
+    font-size: 75px;
+    background: linear-gradient(
+        285deg
+        ,#b8538c 55%, #86A8E7 75%, #5FFBF1 100%);
+    text-transform: capitalize;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero .row .left-section p{
+    margin: 25px 0;
+    color: white;
+    line-height: 28px;
+    padding-right: 150px;
+}
+
+.eye {
+    width: 40%;
+    height: 40%;
+    background-color: white;
+    transform: translate(-50%, -50%) rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 80% 0;
+    cursor: pointer;
+    z-index: 999;
+}
+
+@keyframes test {
+    0%,100% {
+        top: 50%;
+        left: 50%;
+    }
+    25% {
+        top: 60%;
+        left: 40%;
+    }
+    50% {
+        top: 60%;
+        right: 80%;
+    }
+    75% {
+        top: 40%;
+        left: 64%;
+    }
+  }
+
+
+
+.ball {
+    width: 50%;
+    height: 50%;
+    background: linear-gradient(#b50054,#0091b5);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    animation: test 6s infinite alternate cubic-bezier(1,.02,0,1);;
+}
+
+.pupil {
+    width: 40%;
+    height: 40%;
+    background: #222831;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+
+.shut {
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    top: 43%;
+    left: 43%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 999;
+}
+
+.shut span {
+    display: block;
+    width: 100%;
+    height: 20%;
+    background: #198a94;
+    border-radius: 0 0 60% 60%;
+    transition: 1s all;
+}
+
+.eye:hover .shut span {
+    height: 100%;
+}
+
+.eye:hover .wrinkle1 {
+    background: #198a94;
+}
+
+.eye:hover .wrinkle2 {
+    background:#198a94;
+}
+
+.eye:hover .wrinkle3 {
+    background: #198a94;
+}
+
+.wrinkle1 {
+    width: 30%;
+    height: 10%;
+    background: linear-gradient(#b50054,#0091b5);
+    border-radius: 45%;
+    position: absolute;
+    top: 40%;
+    right: 100%;
+    z-index: 1000;
+}
+
+.wrinkle2 {
+    width: 30%;
+    height: 10%;
+    background: linear-gradient(#b50054,#0091b5);
+    border-radius: 45%;
+    position: absolute;
+    transform: rotate(90deg);
+    bottom: 110%;
+    left: 30%;
+    z-index: 1000;
+}
+
+.wrinkle3 {
+    width: 30%;
+    height: 10%;
+     background: linear-gradient(#b50054,#0091b5);
+    border-radius: 45%;
+    position: absolute;
+    transform: translate(-25%)  rotate(45deg);
+    z-index: 1000;
+}
+
+.hero .row .container {
+    animation: move 2s infinite alternate ease-in-out;
+    border-radius: 30px;
+    background-color: #198a94;
+    width: 36%;
+    padding-top: 36%;
+    position: relative;
+    transform: translate(-10%,10%);
+    z-index: 10000;
+}
+
+@keyframes move {
+    0%,100% {
+        top: 0;
+    }
+    50% {
+        top: 20px;
+    }
+  }
+
+.sub-container1 {
+    width: 25%;
+    height: 25%;
+    border-radius: 15px;
+    position: absolute;
+    background: linear-gradient(#ebc5a2,#e34d93);
+    right: -10%;
+    bottom: -10%;
+    opacity: 100;
+    z-index: -99;
+}
+
+.sub-container2 {
+    width: 35%;
+    height: 35%;
+    border-radius: 15px;
+    position: absolute;
+    background: linear-gradient(#92f1d5,#71c986);;
+    left: -10%;
+    top: -10%;
+    z-index: 1;
+}
+
+.sub-container3 {
+    width: 25%;
+    height: 25%;
+    border-radius: 15px;
+    position: absolute;
+    background: linear-gradient(#7d68ad,#ad6885);
+    left: -17%;
+    top: 8%;
+    z-index: 3;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.box div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 6px solid transparent;
+    border-image: linear-gradient(285deg
+    ,#71c986 10%,#71c9a6 30%, #71c9c5 50%,#71adc9 70%);
+    -webkit-border-image: -webkit-linear-gradient(285deg
+    ,#71c986 10%,#71c9a6 30%, #71c9c5 50%,#71adc9 70%);
+    border-image-slice: 1;
+    z-index: 1;
+}
+
+.box div:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    top: 30%;
+    left: 28%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(2) {
+    top: 60%;
+    left: 50%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    top: 18%;
+    left: 20%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(4) {
+    top: 25%;
+    left: 10%;
+    animation: animate 5s linear infinite;
+}
+
+.box div:nth-child(5) {
+    top: 30%;
+    right: 10%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(6) {
+    top: 48%;
+    right: 30%;
+    animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(7) {
+    top: 33%;
+    right: 50%;
+    animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(8) {
+    width: 40px;
+    height: 40px;
+    top: 10%;
+    right: 20%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(9) {
+    top: 50%;
+    left: 15%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(10) {
+    width: 80px;
+    height: 80px;
+    bottom: 15%;
+    left: 31%;
+    animation: animate 11s linear infinite;
+}
+
+.box div:nth-child(11) {
+    width: 100px;
+    height: 100px;
+    bottom: 25%;
+    right: 10%;
+    animation: animate 14s linear infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3) translateY(-90px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    .hero .row {
+        display: 100%;
+    }
+    .hero .row .left-section {
+        width: 55%;
+    }
+
+}
+
+@media only screen and (max-width: 700px) { 
+    .box div:nth-child(3) {
+        display: none;
+    }
+    .box div:nth-child(6) {
+        display: none;
+    }
+    .box div:nth-child(7) {
+        display: none;
+    }
+    .box div:nth-child(8) {
+        display: none;
+    }
+    .box div:nth-child(9) {
+        display: none;
+    }
+    .container {
+        display: none;
+    }
+    .hero .row {
+        display: 100%;
+    }
+    .hero .row .left-section {
+        width: 100%;
+    }
+
+}
