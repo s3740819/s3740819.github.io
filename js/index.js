@@ -1,9 +1,17 @@
+var text = "Currently a 4th-year software engineering student at RMIT University Vietnam, passionate about programming as well as bringing innovative products to life.";
+var index = 0;
 function showSlides(n) {
+    document.getElementById("content").className = "text";
+
     var dots = document.getElementsByClassName("dot");
     for (var i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
     dots[n-1].className += " active";
+    setTimeout(()=>{
+            document.getElementById("content").className = "";
+    }, 300);
+
 
     if(n == 1){
         document.getElementById("title").innerHTML = "<h2><b>Parcheesi game</b></h2> </br>";
@@ -65,6 +73,15 @@ function showSlides(n) {
 }
 
 function view(){
-    console.log("hello");
-    document.getElementById("content").scrollIntoView();
+    document.getElementById('content').scrollIntoView({
+        behavior: 'smooth'
+    });    
+}
+
+function typing(){
+    if(index < text.length){
+        document.getElementById("overview").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typing, 20);
+    }
 }
