@@ -16,7 +16,7 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="https://resume.io/r/uUIfViOL4">About CV</a></li>
+                <li><a href="https://resume.io/r/uUIfViOL4">Resume</a></li>
                 <li><a style="cursor: pointer;" onclick="view()">Projects</a></li>
             </ul>
         </div>
@@ -32,9 +32,12 @@
         <div class="hero">
             <div class="row">
                 <div class="left-section">
+                    <div style="margin-left: 20%; margin-bottom: 10px;"> 
+                        <img src="image.jpg" width="200px" style="border-radius: 50%;">
+                    </div>
                     <div class="content">
-                        <h2> Tran Kim Bao </h2>
-                        <p>Currently a 4th-year software engineering student at RMIT, passionate about programming as well as bringing innovative products to life.</p>
+                        <h2>Tran Kim Bao</h2>
+                        <p id="overview"></p>
                     </div>
                 </div>
                 <div class="container">
@@ -101,7 +104,10 @@
             <span class="dot" onclick="showSlides(8)"></span> 
         </div>
     </div>
-    <script>showSlides(1);</script>
+    <script>
+        typing();
+        showSlides(1);
+    </script>
 
 </body>
 </html>
