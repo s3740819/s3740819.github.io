@@ -1,87 +1,116 @@
-var text = "Currently a 4th-year software engineering student at RMIT University Vietnam, passionate about programming as well as bringing innovative products to life.";
-var index = 0;
-function showSlides(n) {
-    document.getElementById("content").className = "text";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">   
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/index.js"></script>
+    <title>Bao Tran Portfolio</title>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+            <a style="cursor: unset;">William</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="https://resume.io/r/uUIfViOL4">Resume</a></li>
+                <li><a style="cursor: pointer;" onclick="view()">Projects</a></li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <ul>
+                <li><a href="https://www.facebook.com/people/Kim-B%E1%BA%A3o/100005663730934/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://github.com/s3740819/"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/bao-tran-78161021a/"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="header" id="header">
+        <div class="hero">
+            <div class="row">
+                <div class="left-section">
+                    <div style="margin-left: 20%; margin-bottom: 10px;"> 
+                        <img src="image.jpg" width="200px" style="border-radius: 50%;">
+                    </div>
+                    <div class="content">
+                        <h2>Tran Kim Bao</h2>
+                        <p id="overview"></p>
+                        <div id="temp" style="margin-bottom: 8px;"><br></div>
+                        <div id="temp1" style="margin-bottom: 10px;"><br></div>
 
-    var dots = document.getElementsByClassName("dot");
-    for (var i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    dots[n-1].className += " active";
-    setTimeout(()=>{
-            document.getElementById("content").className = "";
-    }, 300);
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="eye">
+                        <div class="wrinkle1"></div>
+                        <div class="wrinkle2"></div>
+                        <div class="wrinkle3"></div>
+                        <div class="shut">
+                            <span></span>
+                        </div>
+                        <div class="ball">
+                            <div class="pupil"></div>
+                        </div>
+                    </div>
+                    <div class="sub-container1">
+                
+                    </div>
+                    <div class="sub-container2">
+                        
+                    </div>
+                    <div class="sub-container3">
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <div class="wrapper">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
 
-    if(n == 1){
-        document.getElementById("title").innerHTML = "<h2><b>Parcheesi game</b></h2> </br>";
-        var content = document.getElementById("content");
-        content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/zd247/cocangua'>Click Here!</a></br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Skill Set Utilized: </b> Java, Javafx, CSS, game development</br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Date:</b> Jul, 2019 - Sep, 2019";
-    }
-    else if (n == 2){
-        document.getElementById("title").innerHTML = "<h2><b>Embedded System Applications with Nuvoton board</b></h2> </br>";
-        var content = document.getElementById("content");
-        content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/s3740819/Embedded-Design'>Click Here!</a></br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Skill Set Utilized: </b> Embedded C, game development</br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Date:</b> Jul, 2019 - Aug, 2019";
-    }
-    else if (n == 3){
-        document.getElementById("title").innerHTML = "<h2><b>QA Testing project</b></h2> </br>";
-        var content = document.getElementById("content");
-        content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/s3740819/QA-Testing'>Click Here!</a></br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Skill Set Utilized: </b> Java, Spring framework, QA Testing skills</br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Date:</b> Mar, 2020 - Apr, 2020";
-    }
-    else if (n == 4){
-        document.getElementById("title").innerHTML = "<h2><b>My RMIT application</b></h2> </br>";
-        var content = document.getElementById("content");
-        content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/hoangdesu/myRMIT'>Click Here!</a></br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Skill Set Utilized: </b> Android development with Java, Firebase, FireStore, Google SDKs and APIs</br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Date:</b> Jul, 2020 - Aug, 2020";
-    }
-    else if (n == 5){
-        document.getElementById("title").innerHTML = "<h2><b>Autonomous car with Raspberry Pi</b></h2> </br>";
-        var content = document.getElementById("content");
-        content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/hoang-10n/EEET2610_Design_3'>Click Here!</a></br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Skill Set Utilized: </b> IoT development, Python programming, Embedded System development, Computer Vision</br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Date:</b> Mar, 2020 - Apr, 2020";
-    }
-    else if (n == 6){
-        document.getElementById("title").innerHTML = "<h2><b>Drug Store Online (Web)</b></h2> </br>";
-        var content = document.getElementById("content");
-        content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/javatalent115/Enterprise-Assignment'>Click Here!</a></br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Skill Set Utilized: </b> HTML, CSS, JavaScript, Spring framework, PostgreSQL</br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Date:</b> Aug, 2021 - Sep, 2021";
-    }
-    else if (n == 7){
-        document.getElementById("title").innerHTML = "<h2><b>Covid19 Behavior Management (Web)</b></h2> </br>";
-        var content = document.getElementById("content");
-        content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/javatalent115/cloud-assigment'>Click Here!</a></br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Skill Set Utilized: </b> Cloud computing, AWS, nodeJS, reactJS</br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Date:</b> Aug, 2021 - Sep, 2021";
-    }
-    else if (n == 8){
-        document.getElementById("title").innerHTML = "<h2><b>Bare Metal OS development (Crossy Road Game) with Raspberry Pi</b></h2> </br>";
-        var content = document.getElementById("content");
-        content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/s3740819/Embedded-System-OS-and-Interfacing'>Click Here!</a></br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Skill Set Utilized: </b> Embedded C, Image Processing, Bare Metal OS development</br></br>";
-        content.innerHTML += "<b style='color: burlywood;'>Date:</b> Aug, 2021 - Sep, 2021";
-    }
+    
+    <div style="font-size: 40px; text-align: center; background: linear-gradient(#5ac75a,#0091b5);"><b>Projects</b></div>
+    <div class="slideshow-container" style="margin-bottom: 50px; margin-top: 50px;">
+        <div class="mySlides" style="text-align: center;">
+            <div id="title" style="color: crimson;"></div>
+            <div id="content" style="color: whitesmoke;"></div>
+        </div>
+    </div>
 
-}
+    <div style="text-align:center; padding-bottom: 50px;">
+        <div style="text-align:center;">
+            <span class="dot" onclick="showSlides(1)"></span> 
+            <span class="dot" onclick="showSlides(2)"></span> 
+            <span class="dot" onclick="showSlides(3)"></span> 
+            <span class="dot" onclick="showSlides(4)"></span> 
+            <span class="dot" onclick="showSlides(5)"></span> 
+            <span class="dot" onclick="showSlides(6)"></span> 
+            <span class="dot" onclick="showSlides(7)"></span> 
+            <span class="dot" onclick="showSlides(8)"></span> 
+        </div>
+    </div>
+    <script>
+        typing();
+        showSlides(1);
+    </script>
 
-function view(){
-    document.getElementById('content').scrollIntoView({
-        behavior: 'smooth'
-    });    
-}
-
-function typing(){
-    if(index < text.length){
-        document.getElementById("overview").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typing, 20);
-    }
-}
+</body>
+</html>
