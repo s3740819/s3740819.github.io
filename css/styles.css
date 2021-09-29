@@ -51,6 +51,7 @@ li {
     font-size: 30px;
     font-weight: 700;
     text-transform: uppercase;
+    animation: name_animate 4s linear infinite;
 }
 
 .nav-bar .menu ul li{
@@ -408,6 +409,17 @@ li {
     animation: animate 14s linear infinite;
 }
 
+@keyframes name_animate{
+    0% {
+        color: #00adb5;
+    }
+    30%{
+        color: #d12f2f;
+    }
+    60% {
+        color: #bcc726;
+    }
+}
 
 @keyframes animate {
     0% {
