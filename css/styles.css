@@ -9,7 +9,6 @@
 
 body {
     background-color: #222831;
-    height: calc(230vh);
 }
 
 a, a:hover {
@@ -472,7 +471,7 @@ img{
 
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 1130px) {
     .box div:nth-child(3) {
         display: none;
     }
