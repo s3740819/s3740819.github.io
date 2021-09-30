@@ -1,5 +1,8 @@
+window.addEventListener("scroll", onScroll);
+
 var text = "Currently a 4th-year software engineering student at RMIT University Vietnam, passionate about programming as well as bringing innovative products to life.";
 var index = 0;
+
 function showSlides(n) {
     document.getElementById("content").className = "text";
 
@@ -72,9 +75,12 @@ function showSlides(n) {
 
 }
 
-function view(){
-    document.getElementById('content').scrollIntoView({
-        behavior: 'smooth'
+function view(input){
+    var elemnet = 'slideshow-container';
+    if (input == 1) elemnet = 'end';
+    document.getElementsByClassName(elemnet)[0].scrollIntoView({
+        behavior: 'smooth',
+        block: "center"
     });    
 }
 
@@ -90,4 +96,34 @@ function typing(){
     else if (index == 121){
         document.getElementById("temp1").innerHTML = "";
     }
+}
+
+function onScroll() {
+    var index = 0;
+  for (var item of document.querySelectorAll(".level")) {
+    elementVisible(item, index);
+    index++;
+  }
+}
+
+function elementVisible(el, index) {
+  let top = el.offsetTop;
+  let height = el.offsetHeight;
+  let bottom = top + height;
+
+  let IsOverBottom = top > (window.pageYOffset + window.innerHeight);
+  let IsBeforeTop = bottom < window.pageYOffset;
+
+  if (!IsOverBottom && !IsBeforeTop) {
+    if(index == 0) el.id = "web";
+    else if (index == 1) el.id = "java";
+    else if (index == 2) el.id = "python";
+    else if (index == 3) el.id = "c";
+    else if (index == 4) el.id = "embedded";
+    else if (index == 5) el.id = "server";
+    else if (index == 6) el.id = "android";
+    else if (index == 7) el.id = "database";
+    else if (index == 8) el.id = "spring";
+    else if (index == 9) el.id = "cloud";
+  }
 }
