@@ -90,10 +90,10 @@ function typing(){
         index++;
         setTimeout(typing, 20);
     }
-    if (index == 63){
+    if (index == 64){
         document.getElementById("temp").innerHTML = "";
     }
-    else if (index == 121){
+    else if (index == 122){
         document.getElementById("temp1").innerHTML = "";
     }
 }
