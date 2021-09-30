@@ -589,7 +589,7 @@ img{
   }
   
   *::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 	background-color: #222831;
   }
 
