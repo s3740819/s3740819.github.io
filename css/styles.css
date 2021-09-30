@@ -9,7 +9,7 @@
 
 body {
     background-color: #222831;
-    height: calc(100vh);
+    height: calc(230vh);
 }
 
 a, a:hover {
@@ -122,21 +122,32 @@ li {
     text-transform: capitalize;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: fly_down 1s normal forwards ease-in-out;
+    animation: drop_right 1s normal forwards ease-in-out;
 }
 
 img{
-    animation: fly_down 1s normal forwards ease-in-out;
+    animation: drop_down 1s normal forwards ease-in-out;
 }
 
 .text{
-    animation: fly_down 0.3s normal forwards ease-in-out;
+    animation: drop_down 0.3s normal forwards ease-in-out;
 }
 
-@keyframes fly_down {
+@keyframes drop_down {
     0%{
         opacity: 0;
         transform: translate3d(0px, -50%, 0px);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes drop_right {
+    0%{
+        opacity: 0;
+        transform: translate3d(-200px, 0%, 0px);
     }
     100%{
         opacity: 1;
@@ -489,6 +500,77 @@ img{
 
 }
 
+.level {
+    background: linear-gradient(270deg,#f2709c,#ff9472, #d12f2f);
+    height: 15px; 
+    border-radius: 30px;
+}
+
+#web{animation: web_animate 1s normal forwards ease-in-out;}
+#c{animation: c_animate 1s normal forwards ease-in-out;}
+#python{animation: python_animate 1s normal forwards ease-in-out;}
+#java{animation: java_animate 1s normal forwards ease-in-out;}
+#server{animation: server_animate 1s normal forwards ease-in-out;}
+#cloud{animation: cloud_animate 1s normal forwards ease-in-out;}
+#embedded{animation: embedded_animate 1s normal forwards ease-in-out;}
+#database{animation: database_animate 1s normal forwards ease-in-out;}
+#spring{animation: spring_animate 1s normal forwards ease-in-out;}
+#android{animation: android_animate 1s normal forwards ease-in-out;}
+
+
+@keyframes web_animate{
+    0% {width: 0%;}
+    100% {width: 85%;}
+}
+
+@keyframes java_animate{
+    0% {width: 0%;}
+    100% {width: 90%;}
+}
+@keyframes c_animate{
+    0% {width: 0%;}
+    100% {width: 75%;}
+}
+@keyframes server_animate{
+    0% {width: 0%;}
+    100% {width: 75%;}
+}
+@keyframes cloud_animate{
+    0% {width: 0%;}
+    100% {width: 70%;}
+}
+@keyframes android_animate{
+    0% {width: 0%;}
+    100% {width: 80%;}
+}
+@keyframes embedded_animate{
+    0% {width: 0%;}
+    100% {width: 70%;}
+}
+@keyframes database_animate{
+    0% {width: 0%;}
+    100% {width: 90%;}
+}
+@keyframes spring_animate{
+    0% {width: 0%;}
+    100% {width: 80%;}
+}
+@keyframes python_animate{
+    0% {width: 0%;}
+    100% {width: 75%;}
+}
+
+.skills::before{
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    filter: blur(10px);
+    margin: -20px;
+}
 
 /* The dots/bullets/indicators */
 .dot {
