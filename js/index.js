@@ -1,6 +1,6 @@
 window.addEventListener("scroll", onScroll);
 
-var text = "Currently a 4th-year software engineering student at RMIT University Vietnam, passionate about programming as well as bringing innovative products to life.";
+var text = "Live in Ho Chi Minh City, Vietnam. Currently a 4th-year software engineering student at RMIT University Vietnam, passionate about game and app development with an innovative mindset.";
 var index = 0;
 
 function showSlides(n) {
@@ -89,12 +89,6 @@ function typing(){
         document.getElementById("overview").innerHTML += text.charAt(index);
         index++;
         setTimeout(typing, 20);
-    }
-    if (index == 64){
-        document.getElementById("temp").innerHTML = "";
-    }
-    else if (index == 122){
-        document.getElementById("temp1").innerHTML = "";
     }
 }
 
