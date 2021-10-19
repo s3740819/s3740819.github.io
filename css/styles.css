@@ -291,8 +291,8 @@ li {
 .box div:nth-child(3) {
     width: 50px;
     height: 50px;
-    top: 18%;
-    left: 20%;
+    top: 85%;
+    left: 7%;
     animation: animate 7s linear infinite;
 }
 
@@ -309,14 +309,14 @@ li {
 }
 
 .box div:nth-child(6) {
-    top: 48%;
+    top: 35%;
     right: 30%;
     animation: animate 8s linear infinite;
 }
 
 .box div:nth-child(7) {
-    top: 33%;
-    right: 50%;
+    top: 90%;
+    right: 35%;
     animation: animate 8s linear infinite;
 }
 
