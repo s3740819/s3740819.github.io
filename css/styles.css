@@ -380,7 +380,21 @@ li {
     .hero .row .left-section {
         width: 100%;
     }
-
+    .nav-bar{
+        height: fit-content;
+    }
+    .content h2{
+        font-size: 30px !important;
+    }
+    #overview{
+        font-size: 12px;
+    }
+    .skills{
+        width: 90% !important;
+    }
+    .slideshow-container{
+        width: 90% !important;
+    }
 }
 
 @media only screen and (max-width: 1130px) {
