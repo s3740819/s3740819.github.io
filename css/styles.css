@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #222831;
+    background: linear-gradient(270deg,#623b3b,#0f123e, #271f38);
 }
 
 a, a:hover {
@@ -26,24 +26,27 @@ li {
 
 .header {
     width: 100%;
-    height: 155vh;
-    background-color: #222831;
+    height: 88vh;
+    background-image: url("https://ak.picdn.net/shutterstock/videos/17947003/thumb/1.jpg");
+    padding-top: 7%;
 }
 
 .nav-bar {
-    width: 90%;
-    height: 120px;
-    margin: auto;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 12vh;
     color: #00adb5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000000;
-    background-color: #222831;
+    background: linear-gradient(
+        285deg
+        ,#16191c, #00091a );
 }
 
 .nav-bar .logo a {
@@ -98,7 +101,7 @@ li {
 }
 
 .hero .row {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,9 +111,9 @@ li {
 
 .hero .row .left-section{
     width: 40%;
-    margin-left: 50px;
     background: transparent;
-    z-index: 2;
+    margin: auto;
+    text-align: center;
 }
 
 .hero .row .left-section h2{
@@ -170,10 +173,8 @@ li {
 }
 
 .hero .row .left-section p{
-    margin: 25px 0;
     color: white;
     line-height: 28px;
-    padding-right: 150px;
 }
 
 .eye {
@@ -206,110 +207,6 @@ li {
         top: 40%;
         left: 64%;
     }
-  }
-
-
-
-.ball {
-    width: 50%;
-    height: 50%;
-    background: linear-gradient(#b50054,#0091b5);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -50%);
-    animation: test 6s infinite alternate cubic-bezier(1,.02,0,1);;
-}
-
-.pupil {
-    width: 40%;
-    height: 40%;
-    background: #222831;
-    border-radius: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate( -50%, -50%);
-}
-
-.shut {
-    width: 150%;
-    height: 100%;
-    position: absolute;
-    top: 43%;
-    left: 43%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    z-index: 999;
-}
-
-.shut span {
-    display: block;
-    width: 100%;
-    height: 20%;
-    background: #198a94;
-    border-radius: 0 0 60% 60%;
-    transition: 1s all;
-}
-
-.eye:hover .shut span {
-    height: 100%;
-}
-
-.eye:hover .wrinkle1 {
-    background: #198a94;
-}
-
-.eye:hover .wrinkle2 {
-    background:#198a94;
-}
-
-.eye:hover .wrinkle3 {
-    background: #198a94;
-}
-
-.wrinkle1 {
-    width: 30%;
-    height: 10%;
-    background: linear-gradient(#b50054,#0091b5);
-    border-radius: 45%;
-    position: absolute;
-    top: 40%;
-    right: 100%;
-    z-index: 1000;
-}
-
-.wrinkle2 {
-    width: 30%;
-    height: 10%;
-    background: linear-gradient(#b50054,#0091b5);
-    border-radius: 45%;
-    position: absolute;
-    transform: rotate(90deg);
-    bottom: 110%;
-    left: 30%;
-    z-index: 1000;
-}
-
-.wrinkle3 {
-    width: 30%;
-    height: 10%;
-     background: linear-gradient(#b50054,#0091b5);
-    border-radius: 45%;
-    position: absolute;
-    transform: translate(-25%)  rotate(45deg);
-    z-index: 1000;
-}
-
-.hero .row .container {
-    animation: move 2s infinite alternate ease-in-out;
-    border-radius: 30px;
-    background-color: #198a94;
-    width: 36%;
-    padding-top: 36%;
-    position: relative;
-    transform: translate(-10%,10%);
-    z-index: 10000;
 }
 
 @keyframes move {
@@ -481,7 +378,7 @@ li {
         display: 100%;
     }
     .hero .row .left-section {
-        width: 55%;
+        width: 100%;
     }
 
 }
@@ -623,3 +520,20 @@ li {
 											  transparent)
   }
   
+
+.proj {
+    background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+    background-size: cover;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    font-family:Baskerville,Times,'Times New Roman',serif;
+    font-size: 75px;
+    line-height: 1;
+    margin: 10px 0;
+    text-align:center;
+    font-weight:bold;
+    margin-top: 20px;
+    text-decoration: underline;
+  }
