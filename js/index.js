@@ -15,11 +15,6 @@ function showSlides(n) {
             dots[i].className = dots[i].className.replace(" active", "");
         }
         dots[n-1].className += " active";
-        setTimeout(()=>{
-                document.getElementById("img").className = "";
-                document.getElementById("content").className = "";
-        }, 300);
-
 
         if(n == 1){
             document.getElementById("img").setAttribute("src", "img/cocangua.png");
@@ -94,6 +89,11 @@ function showSlides(n) {
             content.innerHTML += "<b style='color: burlywood;'>Company:</b> RMIT University Vietnam (School Project)";
 
         }
+
+        setTimeout(()=>{
+            document.getElementById("img").className = "";
+            document.getElementById("content").className = "";
+        }, 300);
     }
 }
 
