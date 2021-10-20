@@ -1,6 +1,6 @@
 window.addEventListener("scroll", onScroll);
 
-var text = "Live in Ho Chi Minh City, Vietnam. Currently a 4th-year software engineering student at RMIT University Vietnam, passionate about game and app development with an innovative mindset.";
+var text = "Hi, I'm Bao Tran from HCM city, Vietnam. Currently, I am a 4th-year software engineering student at RMIT University Vietnam, passionate about game and application development with an innovative mindset.";
 var index = 0;
 currentSlide = 0;
 
