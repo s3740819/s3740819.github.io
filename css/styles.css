@@ -363,8 +363,22 @@ li {
     }
 }
 
+@media screen and (max-width: 500px) {
+    #img{
+        width: 100%;
+    }
+}
 
-@media only screen and (max-width: 900px) and (max-height: 900px){ 
+@media screen and (max-width: 800px) and (min-height: 900px) {
+    .skills{
+        width: 90% !important;
+    }
+    .slideshow-container{
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 900px) and (max-height: 940px){ 
     .hero .row {
         display: 100%;
     }
@@ -375,6 +389,8 @@ li {
         width: 90%;
     }
     .nav-bar{
+        padding-top: 3%;
+        padding-bottom: 3%;
         height: fit-content;
     }
     .content h2{
