@@ -557,6 +557,7 @@ li {
     font-weight:bold;
     margin-top: 20px;
     text-decoration: underline;
+    height: fit-content;
   }
 
 h4{
