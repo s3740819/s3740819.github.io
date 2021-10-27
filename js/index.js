@@ -6,28 +6,24 @@ currentSlide = 0;
 
 function showSlides(n) {
     if (currentSlide != n){
-        currentSlide = n;
-        document.getElementById("content").className = "text";
-        document.getElementById("img").className = "img";
-
+        currentSlide = n;        
         var dots = document.getElementsByClassName("dot");
         for (var i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
+            document.getElementById(i+1).className = "pic hide"; 
         }
         dots[n-1].className += " active";
-
+        document.getElementById("content").className = "text";
+        document.getElementsByClassName("pic")[n-1].className = "pic img";
         if (n == 1){
-            document.getElementById("img").setAttribute("src", "img/fish.png");
             document.getElementById("title").innerHTML = "<h2><b>Mini Fish game with Web development</b></h2> </br>";
             var content = document.getElementById("content");
             content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/s3740819/Fish-game'>Click Here!</a></br></br>";
             content.innerHTML += "<b style='color: burlywood;'>Skill Set Utilized: </b> Web development (html,css,js), Game development</br></br>";
             content.innerHTML += "<b style='color: burlywood;'>Date:</b> Feb, 2019 (2 days)</br></br>";
             content.innerHTML += "<b style='color: burlywood;'>Company:</b> Self Study Project";
-
         }
         else if(n == 2){
-            document.getElementById("img").setAttribute("src", "img/cocangua.png");
             document.getElementById("title").innerHTML = "<h2><b>Parcheesi game</b></h2> </br>";
             var content = document.getElementById("content");
             content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/zd247/cocangua'>Click Here!</a></br></br>";
@@ -36,7 +32,6 @@ function showSlides(n) {
             content.innerHTML += "<b style='color: burlywood;'>Company:</b> RMIT University Vietnam (School Project)";
         }
         else if (n == 3){
-            document.getElementById("img").setAttribute("src", "img/embed2.png");
             document.getElementById("title").innerHTML = "<h2><b>Embedded System Applications with Nuvoton board</b></h2> </br>";
             var content = document.getElementById("content");
             content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/s3740819/Embedded-Design'>Click Here!</a></br></br>";
@@ -45,7 +40,6 @@ function showSlides(n) {
             content.innerHTML += "<b style='color: burlywood;'>Company:</b> RMIT University Vietnam (School Project)";
         }
         else if (n == 4){
-            document.getElementById("img").setAttribute("src", "img/qa.png");
             document.getElementById("title").innerHTML = "<h2><b>QA Testing project</b></h2> </br>";
             var content = document.getElementById("content");
             content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/s3740819/QA-Testing'>Click Here!</a></br></br>";
@@ -54,7 +48,6 @@ function showSlides(n) {
             content.innerHTML += "<b style='color: burlywood;'>Company:</b> RMIT University Vietnam (School Project)";
         }
         else if (n == 5){
-            document.getElementById("img").setAttribute("src", "img/home.png");
             document.getElementById("title").innerHTML = "<h2><b>My RMIT application</b></h2> </br>";
             var content = document.getElementById("content");
             content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/hoangdesu/myRMIT'>Click Here!</a></br></br>";
@@ -63,7 +56,6 @@ function showSlides(n) {
             content.innerHTML += "<b style='color: burlywood;'>Company:</b> RMIT University Vietnam (School Project)";
         }
         else if (n == 6){
-            document.getElementById("img").setAttribute("src", "img/PiCar.jpg");
             document.getElementById("title").innerHTML = "<h2><b>Autonomous car with Raspberry Pi</b></h2> </br>";
             var content = document.getElementById("content");
             content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/hoang-10n/EEET2610_Design_3'>Click Here!</a></br></br>";
@@ -72,7 +64,6 @@ function showSlides(n) {
             content.innerHTML += "<b style='color: burlywood;'>Company:</b> RMIT University Vietnam (School Project)";
         }
         else if (n == 7){
-            document.getElementById("img").setAttribute("src", "img/drug.png");
             document.getElementById("title").innerHTML = "<h2><b>Drug Store Online (Web)</b></h2> </br>";
             var content = document.getElementById("content");
             content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/javatalent115/Enterprise-Assignment'>Click Here!</a></br></br>";
@@ -81,7 +72,6 @@ function showSlides(n) {
             content.innerHTML += "<b style='color: burlywood;'>Company:</b> RMIT University Vietnam (School Project)";
         }
         else if (n == 8){
-            document.getElementById("img").setAttribute("src", "img/covid.png");
             document.getElementById("title").innerHTML = "<h2><b>Covid19 Behavior Management (Web)</b></h2> </br>";
             var content = document.getElementById("content");
             content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/javatalent115/cloud-assigment'>Click Here!</a></br></br>";
@@ -90,7 +80,6 @@ function showSlides(n) {
             content.innerHTML += "<b style='color: burlywood;'>Company:</b> RMIT University Vietnam (School Project)";
         }
         else if (n == 9){
-            document.getElementById("img").setAttribute("src", "img/game.png");
             document.getElementById("title").innerHTML = "<h2><b>Bare Metal OS development (Crossy Road Game) with Raspberry Pi</b></h2> </br>";
             var content = document.getElementById("content");
             content.innerHTML = "<b style='color: burlywood;'>Github: </b> <a href='https://github.com/s3740819/Embedded-System-OS-and-Interfacing'>Click Here!</a></br></br>";
@@ -100,7 +89,7 @@ function showSlides(n) {
         }
 
         setTimeout(()=>{
-            document.getElementById("img").className = "";
+            document.getElementsByClassName("pic")[n-1].className = "pic";
             document.getElementById("content").className = "";
         }, 300);
     }

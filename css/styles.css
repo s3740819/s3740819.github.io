@@ -139,6 +139,10 @@ li {
     animation: fade 0.3s normal forwards ease-in-out;
 }
 
+.hide{
+    display: none;
+}
+
 @keyframes drop_down {
     0%{
         opacity: 0;
@@ -364,7 +368,7 @@ li {
 }
 
 @media screen and (max-width: 500px) {
-    #img{
+    .pic{
         width: 100%;
     }
 }
