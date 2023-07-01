@@ -446,42 +446,47 @@ li {
 #c{animation: c_animate 1s normal forwards ease-in-out;}
 #python{animation: python_animate 1s normal forwards ease-in-out;}
 #java{animation: java_animate 1s normal forwards ease-in-out;}
-#server{animation: server_animate 1s normal forwards ease-in-out;}
+#nodejs{animation: nodejs_animate 1s normal forwards ease-in-out;}
 #cloud{animation: cloud_animate 1s normal forwards ease-in-out;}
 #embedded{animation: embedded_animate 1s normal forwards ease-in-out;}
 #database{animation: database_animate 1s normal forwards ease-in-out;}
 #spring{animation: spring_animate 1s normal forwards ease-in-out;}
 #android{animation: android_animate 1s normal forwards ease-in-out;}
+#ios{animation: ios_animate 1s normal forwards ease-in-out;}
 
 
 @keyframes web_animate{
     0% {width: 0%;}
-    100% {width: 85%;}
+    100% {width: 80%;}
 }
 
 @keyframes java_animate{
     0% {width: 0%;}
-    100% {width: 90%;}
+    100% {width: 70%;}
 }
 @keyframes c_animate{
     0% {width: 0%;}
-    100% {width: 75%;}
+    100% {width: 65%;}
 }
-@keyframes server_animate{
+@keyframes nodejs_animate{
     0% {width: 0%;}
-    100% {width: 75%;}
+    100% {width: 90%;}
 }
 @keyframes cloud_animate{
     0% {width: 0%;}
-    100% {width: 70%;}
+    100% {width: 80%;}
 }
 @keyframes android_animate{
     0% {width: 0%;}
-    100% {width: 80%;}
+    100% {width: 65%;}
+}
+@keyframes ios_animate{
+    0% {width: 0%;}
+    100% {width: 65%;}
 }
 @keyframes embedded_animate{
     0% {width: 0%;}
-    100% {width: 70%;}
+    100% {width: 65%;}
 }
 @keyframes database_animate{
     0% {width: 0%;}
@@ -489,11 +494,11 @@ li {
 }
 @keyframes spring_animate{
     0% {width: 0%;}
-    100% {width: 80%;}
+    100% {width: 70%;}
 }
 @keyframes python_animate{
     0% {width: 0%;}
-    100% {width: 75%;}
+    100% {width: 65%;}
 }
 
 .skills::before{

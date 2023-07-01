@@ -134,10 +134,11 @@ function elementVisible(el, index) {
     else if (index == 2) el.id = "python";
     else if (index == 3) el.id = "c";
     else if (index == 4) el.id = "embedded";
-    else if (index == 5) el.id = "server";
+    else if (index == 5) el.id = "nodejs";
     else if (index == 6) el.id = "android";
-    else if (index == 7) el.id = "database";
-    else if (index == 8) el.id = "spring";
-    else if (index == 9) el.id = "cloud";
+    else if (index == 7) el.id = "ios";
+    else if (index == 8) el.id = "database";
+    else if (index == 9) el.id = "spring";
+    else if (index == 10) el.id = "cloud";
   }
 }
